@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acceso a los elementos</title>
+</head>
+<body>
+	<h1 id="titulo1">Introduce tu nombre:</h1>
+	<h2 id="titulo2">(Tu nombre)</h2>
+
+	<input type="text" name="nombre" id="texto">
+	<input type="button" value="Cambiar nombre" onclick="cambiar()">
+
+	<script type="text/javascript">
+		let cambiar = ()=>{
+				document.getElementById("titulo2").innerHTML = document.getElementById("texto").value;	
+				document.getElementById("texto").value = "";
+		}
+
+	</script>
+	
+
+	</script>
+</body>
+</html>

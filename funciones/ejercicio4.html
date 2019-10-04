@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones - 4</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let tipo = prompt("¿Que tipo de temperatura quieres calcular, Celsius(C) o Fahrenheit(F)?Escribe solo la letra marcada entre parentesis): ");
+		let grados = prompt("¿Que temperatura hay?: ");
+		
+		let calcular=(tipo, grados)=>{
+			if (tipo == "c"){
+				let Fa = (grados*9/5)+32;
+				console.log("Los grados "+grados+ " °C calculados en Fahrenheit son "+Fa+" °F");
+			}
+			else if(tipo == "f"){
+				let Ce = (grados-32)*5/9;
+				console.log("Los grados "+grados+ " °F calculados en Celsius son "+Ce+" °C");
+			}
+
+			
+		}
+			
+		for (let i = 1; i<=3; i++){
+			calcular(tipo, grados);
+		}
+
+		
+		
+
+
+
+	</script>
+</body>
+</html>

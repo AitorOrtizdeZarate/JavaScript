@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Recojida y procesamiento de datos de un formulario</title>
+</head>
+<body>
+	<h1>Recojida y procesamiento de datos de un formulario</h1>
+	
+	Nombre del cliente: <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre"><br><br>
+	Material de la caja:<select size="1" name="material" id="lista">
+				<option value="elige">Elige un material:</option>
+				<option value="Madera">Madera</option>
+				<option value="Plastico">Plastico</option>
+				<option value="Metal">Metal</option>
+				<option value="Poliespan">Poliespan</option>
+			</select>
+<br><br>
+	Seleccione una dimension para la caja:<br>
+			<input type="radio" value="Diminuta" name="elegir"><label>Diminuta</label> <br>
+			<input type="radio" value="Mediano" name="elegir"><label>Mediano</label><br>
+			<input type="radio" value="Grande" name="elegir"><label>Grande</label><br>
+	<br>
+	Comentarios
+	<br>
+	<textarea id="comentario" name="comentario" style="width: 400px; height: 300px;"></textarea><br>
+
+
+
+	<input type="button" value="Ver Seleccion" onclick="cambiar()" >
+
+	<script type="text/javascript">
+				var stexto = document.getElementById("comentario");
+				var snombre = document.getElementById("nombre");
+				var slista = document.getElementById("lista");
+		let cambiar = ()=>{
+				stexto.innerHTML = "";
+				if (snombre.value){
+					stexto.innerHTML += "Tu nombre es "+snombre.value;
+				}else{
+					alert("Debes de escribir tu nombre");
+				}
+
+				if (slista.selectedIndex == 0){
+					alert("Elige un material");
+				}else{
+					stexto.innerHTML += "\nEl material elegido es "+slista.options[slista.selectedIndex].innerHTML;
+				}
+
+				var sradio = document.querySelectorAll("input[type='radio']");
+				for(i=0;i<sradio.length;i++){
+					if (sradio[i].checked == true){
+						stexto.innerHTML += "\nEl tamaño elegido es "+sradio[i].value;
+					}
+					else{
+						alert("Debes elegir un tamaño");
+					}
+				}
+
+
+				}
+		 
+
+	</script>
+	
+
+	</script>
+</body>
+</html>

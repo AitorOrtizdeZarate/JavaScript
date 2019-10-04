@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones - 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let edad = prompt("¿Que edad tienes?: ");
+		let cafes = 12;
+		let cola = 200;
+		let hambur = 100;
+		
+		let calcular=(edad, cafes, cola, hambur)=>{
+			let vivir = Math.floor(Math.random()*10+90);
+			let vida = vivir - edad;
+			let cafesvida = cafes*vida;
+			let colavida = cola*vida;
+			let hamburvida = hambur*vida;
+
+			console.log("Te quedan "+vida+" años, y te vas a tomar "+cafesvida+" cafes, "+colavida+" coca-colas y "+hamburvida+" hamburguesas esta vida");
+		}
+			
+		for (let i = 1; i<=3; i++){
+			calcular(edad,cafes,cola,hambur);
+		}		
+
+		
+		
+
+
+
+	</script>
+</body>
+</html>

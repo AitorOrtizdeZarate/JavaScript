@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio 6</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let numero = prompt("numero");
+		let num = parseInt(numero);
+
+		let contador = 0;
+		for(let i = 1; i <= num; i++){
+			if ((num % i) == 0) {
+				contador++;
+			}
+		}
+
+		if (contador <= 2){
+			document.write("El numero "+num+" es primo");
+
+		}else{
+			document.write("El numero "+num+" no es primo")
+		}
+
+		</script>
+</body>
+</html>

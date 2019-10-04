@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Funciones - 5</title>
+</head>
+<body>
+<script type="text/javascript">
+/*Este ejercicio consiste en el calculo de una supuesta apuesta online de futbol*/
+
+let dinero = prompt("¿Cuanto dinero quieres apostar?");
+var partido1 = prompt("Que apuesta desea hacer en este partido? \nEibar Vs Sevilla \n 1 | x | 2 \n(Si no desea apostar este partido pulse z)");
+do {
+	var partido1 = prompt("Por favor escribe 1, x o 2 para apostar en el partido de Eibar VS Sevilla \n o escribe z para no apostar este partido");
+}
+	while (partido1 != 1 || partido1 != 2 || partido1 != "x" || partido1 != "z");
+		
+	
+
+let partido2 = prompt("Que apuesta desea hacer en este partido?\n Celta Vs Español \n 1 | x | 2 \n(Si no desea apostar este partido pulse z)");
+let partido3 = prompt("Que apuesta desea hacer en este partido?\n Real sociedad Vs Alaves\n 1 | x | 2 \n(Si no desea apostar este partido pulse z)");
+
+let calcular=(dinero, partido1, partido2, partido3)=>{
+
+
+let nada = 0;
+
+let eibar = 3.25;
+let empate1 = 3.30;
+let sevilla = 2.25;
+
+let celta = 1.80;
+let empate2 = 3.60;
+let espanol = 4.50;
+
+let real = 1.65;
+let empate3= 3.75;
+let alaves = 5.50;
+
+
+
+if (partido1 == 1){
+var apu1 = dinero*eibar;
+
+}
+else if(partido1 == 2){
+var apu1 = dinero*sevilla;
+
+}
+else if(partido1 == "x"){
+var apu1 = dinero*empate1;
+
+}
+else if (partido1 == "z"){
+var apu1 = dinero + nada;
+}
+
+
+
+
+
+
+if (partido2 == 1){
+var apu2 = apu1*celta;
+
+}
+else if(partido2 == 2){
+var apu2 = apu1*espanol;
+
+}
+else if(partido2 == "x"){
+var apu2 = apu1*empate2;
+
+}
+else if (partido1 == "z"){
+	var apu2 = apu1+ nada;
+}
+
+
+
+
+if (partido3 == 1){
+var apu3 = apu2*real;
+console.log(apu3);
+}
+else if(partido3 == 2){
+var apu3 = apu2*alaves;
+console.log(apu3);
+}
+else if(partido3 == "x"){
+var apu3 = apu2*empate3;
+console.log(apu3);
+}
+else if (partido1 == "z"){
+	var apu3 = apu2+ nada;
+}
+
+}
+
+
+
+calcular(dinero, partido1, partido2, partido3);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

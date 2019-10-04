@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h2>¿Cual es la mejor descipcion de una variable?</h2>
+
+			<input type="radio" value="mal" name="elegir1"><label>Un metodo para unir cadenas.</label> <br>
+			<input type="radio" value="bien" name="elegir1" ><label>Le permite almacenar informacion para que pueda ser reutilizada en todo el programa.</label><br>
+			<input type="radio" value="mal" name="elegir1"><label>Le permite tomar una decision basada en una condicion.</label><br>
+	<br>
+	<h2>¿Cual es la mejor descripcion de la concatenacion?</h2>
+
+			<input type="radio" value="bien" name="elegir2"><label>Un metodo para unir cadenas..</label> <br>
+			<input type="radio" value="mal" name="elegir2"><label>Le permite almacenar informacion para que pueda ser reutilizada en todo el programa. </label><br>
+			<input type="radio" value="mal" name="elegir2"><label>Le permite tomar una decision basada en una condicion.</label><br>
+	<br>
+	<h2>¿Cual es la mejor descripcion de la instruccion if?</h2>
+
+			<input type="radio" value="mal" name="elegir3"><label>Un metodo para unir cadenas.</label> <br>
+			<input type="radio" value="mal" name="elegir3"><label>Le permite almacenar informacion para que pueda ser reutilizada en todo el programa.</label><br>
+			<input type="radio" value="bien" name="elegir3"><label>Le permite tomar una decision basada en una condicion.</label><br>
+	<br>
+		<input type="button" value="Calificacion" onclick="calificar()" >
+		<p>Tu calificacion es: <label id="final">___</label></p>
+
+	<script type="text/javascript">
+			var total = document.getElementById("final");
+		let calificar = () => {
+			let aciertos = document.querySelectorAll("input[type = 'radio']");
+			total.innerHTML = "";
+			let cont = 0;
+			for (i=0; i<aciertos.length;i++)
+				if (aciertos[i].checked == true && aciertos[i].value == "bien")
+					cont++;
+
+			if (validacion())
+				total.innerHTML = "¡Debes seleccionar todas!";	
+			else if (cont == 0) {
+				total.innerHTML += "No creo que hayas estudiado";
+			}
+			else if (cont == 1) {
+				total.innerHTML += "Necesitas estudiar mas tiempo. Intentalo de nuevo.";
+			}
+			else if (cont == 2) {
+				total.innerHTML += "Vas por buen camino.";
+			}
+			else if (cont == 3) {
+				total.innerHTML += "¡Eres un profesional de JavaScript!";
+			}
+			}
+			let validacion = () => {
+				let validacion = document.querySelectorAll("input[type = 'radio']");
+				let cont = 0;
+				for (i=0; i<validacion.length;i++)
+					if (validacion[i].checked == true)
+						cont++;
+				if (cont == 3){
+					return false;
+				}else{
+					return true;
+				}
+			}
+
+	</script>
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+		let numero_mes = prompt("Que numero de mes quieres sacar?");
+		let numeroarray = numero_mes - 1;
+		document.write("El mes seleccionado es: "+meses[numeroarray]+"<br>");
+		document.write("Este es el tamaño del array: "+meses.length+"<br>");
+		let nuevoElemento = meses.push("armario");
+		document.write("Este es el tamaño del array despues de añadir un elemento: "+meses.length+"<br>");
+		let borrarElemento = meses.pop("diciembre");
+		document.write("Este es el tamaño del array despues de borrar un elemento: "+meses.length+"<br>");
+
+	</script>
+
+</body>
+</html>

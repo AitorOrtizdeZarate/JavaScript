@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular IVA</title>
+	<script type="text/javascript">
+
+			let producto = 12;
+			let tipoIVA = prompt("Escriba el tipo de IVA: (general, reducido o superreducido)", "");
+			const calcular = (producto, tipoIVA) => {
+			
+			if (tipoIVA == "general"){
+				
+				let calculado = producto * 0.21;
+				return calculado + producto;
+
+			}
+			else if (tipoIVA == "reducido"){
+			
+				let calculado = producto * 0.10;
+				return calculado + producto;
+			}
+			else if (tipoIVA == "superreducido"){
+			
+				let calculado = producto * 0.04;
+				return calculado + producto;
+			}
+			
+		
+			}
+
+		
+		let conIVA = calcular(producto, tipoIVA);
+		alert("El percio de "+producto+"€ ha subido a"+ conIVA+" por el IVA "+tipoIVA)+".";
+			
+
+	</script>
+</head>
+<body>
+
+	
+
+
+</script>
+</body>
+</html>

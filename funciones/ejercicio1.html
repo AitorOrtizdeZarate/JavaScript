@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones - 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let nombre = prompt("Nombre:");
+		let apellido = prompt("Apellido:");
+		let pedir=(nombre,apellido)=>{
+			
+			let hijos = Math.floor(Math.random() * 5+1);
+			let ciudades = ["San sebastian", "Madrid", "Barcelona", "Bilbao"];
+			let ciudadr = Math.floor(Math.random() * 4);
+			let ciudad = ciudades[ciudadr];
+			
+
+			console.log("Hola "+nombre+" "+apellido+", vas a tener "+hijos+" hijos y viviras en la ciudad de "+ciudad);
+		}
+		for(let i = 0; i<3;i++){
+			pedir(nombre, apellido)
+		}
+		
+
+
+
+	</script>
+</body>
+</html>
