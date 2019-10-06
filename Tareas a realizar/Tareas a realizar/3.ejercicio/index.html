@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		h1{
+			style="text-align: center;"
+		}
+		#final{
+			font-size: 20px;
+		}
+		img{
+			width: 200px;
+			height: 150px;
+		}
+
+	</style>
+	<title>Test</title>
+</head>
+<body>
+	<h1>¿Cuales son las capitales de estos paises?</h1>
+	<h2>La capital de Australia es: </h2>
+
+			<input type="radio" value="mal" name="elegir1"><label>Sidney</label> <br>
+			<input type="radio" value="mal" name="elegir1" ><label>Melbourne.</label><br>
+			<input type="radio" value="bien" name="elegir1"><label>Canberra</label><br>
+	<br>
+	<h2>La capital de Croacia es:</h2>
+
+			<input type="radio" value="mal" name="elegir2"><label>Split</label> <br>
+			<input type="radio" value="bien" name="elegir2"><label>Zagreb</label><br>
+			<input type="radio" value="mal" name="elegir2"><label>Zadar</label><br>
+	<br>
+	<h2>La capital de Canada es:</h2>
+
+			<input type="radio" value="mal" name="elegir3"><label>Vancouver</label> <br>
+			<input type="radio" value="mal" name="elegir3"><label>Toronto</label><br>
+			<input type="radio" value="bien" name="elegir3"><label>Ottawa</label><br>
+	<br>
+		<input type="button" value="Calificacion" onclick="calificar()" >
+		<p id="final"></p>
+		
+
+	<script type="text/javascript">
+			var total = document.getElementById("final");
+			var imagen = document.getElementById("gif");
+		let calificar = () => {
+			let aciertos = document.querySelectorAll("input[type = 'radio']");
+			total.innerHTML = "";
+			let cont = 0;
+			for (i=0; i<aciertos.length;i++)
+				if (aciertos[i].checked == true && aciertos[i].value == "bien")
+					cont++;
+
+			if (validacion())
+				alert("¡Debes de seleccionar una respusta por pregunta!")	
+			else if (cont == 0) {
+				total.innerHTML += "<b>- Aciertos 0 <br>- Gran trabajo </b><br> <img src='gif/lose.gif'></img>";
+			}
+			else if (cont == 1) {
+				total.innerHTML += "<b>- Aciertos 1 <br>- Eso esta bien </b><br> <img src='gif/meh.gif'></img>";
+			}
+			else if (cont == 2) {
+				total.innerHTML += "<b>- Aciertos 2 <br>- Eso esta bien </b><br> <img src='gif/meh.gif'></img>";
+			}
+			else if (cont == 3) {
+				total.innerHTML += "<b>- Aciertos 3 <br>- Gran trabajo </b><br> <img src='gif/win.gif'></img>";
+
+			}
+			}
+			let validacion = () => {
+				let validacion = document.querySelectorAll("input[type = 'radio']");
+				let cont = 0;
+				for (i=0; i<validacion.length;i++)
+					if (validacion[i].checked == true)
+						cont++;
+				if (cont == 3){
+					return false;
+				}else{
+					return true;
+				}
+			}
+
+	</script>
+	
+
+	</script>
+</body>
+</html>
