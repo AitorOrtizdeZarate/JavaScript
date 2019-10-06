@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			margin-left: 100px;
+		}
+		.escribir{
+			width: 300px;
+			height: 50px;
+		}
+
+	</style>
+	<title>Registro en Netflix</title>
+</head>
+<body>
+	<h1>Selecciona el plan ideal para ti</h1>
+	
+		<form id="plan">
+			<input type="radio" value="Basico" name="elegir1" onclick="basico()"><label>Basico</label> <br>
+			<input type="radio" value="Estandar" name="elegir1" onclick="estandar()"><label>Estandar</label><br>
+			<input type="radio" value="Premium" name="elegir1" onclick="premium()"><label>Premium</label><br>
+		</form>
+		<p id="inf"><b>Precio mensual: </b> <br><b>Disponible en HD: </b> <br><b>Disponible en ultra HD: </b> <br><b>Pantallas que se pueden ver al mismo tiempo: </b> </p>
+	<hr>
+	<h1>Regristrate para comenzar tu mes gratis</h1>
+	<h3>Crea tu cuenta: </h3>
+		<form>
+			Correo<br>
+			<input type="text" name="correo" placeholder="Escribe tu correo" style="width: 300px; height: 25px" id="correo"><br><br>
+			Elegir una contraseña<br>
+			<input type="password" name="contra" placeholder="Escribe una contraseña" style="width: 300px; height: 25px" id="contra" ><br><br>
+			<input type="checkbox" name="ofertas" id="check"> No, no quiero ofertas especiales de Netflix por correo.
+			<br><br>
+			<input type="button" name="Registrarse" value="REGISTRARSE" onclick="registro()">
+		</form>
+		
+		
+
+	<script type="text/javascript">
+		var informacion = document.getElementById("inf");
+		var email = document.getElementById("correo");
+		var pass = document.getElementById("contra");
+		let ofertas = document.getElementById("check");
+		
+		let basico = () =>{
+			informacion.innerHTML = " ";
+			informacion.innerHTML += "<b>Precio mensual: </b> 7,99€<br><b>Disponible en HD: </b> NO<br><b>Disponible en ultra HD: </b> NO<br><b>Pantallas que se pueden ver al mismo tiempo: </b> 1";
+		}
+		let estandar = () =>{
+			informacion.innerHTML = " ";
+			informacion.innerHTML += "<b>Precio mensual: </b> 9,99€<br><b>Disponible en HD: </b> SI<br><b>Disponible en ultra HD: </b> NO<br><b>Pantallas que se pueden ver al mismo tiempo: </b> 2";
+		}
+		let premium = () =>{
+			informacion.innerHTML = " ";
+			informacion.innerHTML += "<b>Precio mensual: </b> 11,99€<br><b>Disponible en HD: </b> SI<br><b>Disponible en ultra HD: </b> SI<br><b>Pantallas que se pueden ver al mismo tiempo: </b> 4";
+		}
+
+		let registro = () =>{
+			let radio = document.querySelectorAll("input[type = 'radio']");
+			for(i=0; i<radio.length;i++){
+				if (radio[i].checked == true){
+					var selected = radio[i].value;
+				}
+			}
+
+			if (validacion()){
+				alert("Debes de seleccionar el plan ideal.");
+			}
+			else if(email.value == ""){
+				alert("Debes escribir tu correo");
+			}
+			else if (pass.value == ""){
+				alert("Debes escribir una contraseña");
+			}
+			else if(ofertas.checked == true){
+					alert("Tu cuenta de Netflix ha sido creada correctamente.\nTipo de cuenta: "+selected+"\nCorreo: "+email.value)
+				}
+			else if	(ofertas.checked == false){
+					alert("Tu cuenta de Netflix ha sido creada correctamente.\nTipo de cuenta: "+selected+"\nCorreo: "+email.value+"\nTe enviaremos ofertas especiales por correo.")
+				}
+			}
+		
+
+		let validacion = () => {
+				let validacion = document.querySelectorAll("input[type = 'radio']");
+				let cont = 0;
+				for (i=0; i<validacion.length;i++)
+					if (validacion[i].checked == true)
+						cont++;
+				if (cont == 0){
+					return true;
+				}else{
+					return false;
+				}
+
+
+			}
+
+	</script>
+	
+
+	</script>
+</body>
+</html>
