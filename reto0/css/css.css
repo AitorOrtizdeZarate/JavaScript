@@ -1,0 +1,162 @@
+ *{
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background-image: url("../imagenes/fondo4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+header{
+	float: left;
+	width: 100vw;
+	height: 15vh;
+	background-color: black;
+
+	/*border: 1px solid;*/
+}
+h1 {
+	text-align: center;
+	color: black;
+	font-size: 7.610350076103501vh;
+	text-shadow: -0.063em 0 red, 0 0.032em red, 0.063em 0 red, 0 -0.032em red;
+	margin-top: 2vh;
+}
+ nav{
+ 	float: left;
+ 	width: 100vw;
+ 	height: 5vw;
+
+ 	/*background-color: RGB(0, 0, 0, 0.3);*/
+ }
+ ul{
+ 	margin-top: 1.5vh;
+ 	list-style: none;
+ 	margin-left: 35vw;
+
+ 	
+
+ }
+ li{
+ 	margin-top: 1px;
+ 	border-radius:10px;
+	float: left;
+	height: 7.610350076103501vh;
+	width: 7.320644216691069vw;
+	text-align: center;
+	 margin: 0 5px;
+
+
+ }
+ul li a {
+  position: relative; 
+  display: block;
+  height: 7.610350076103501vh;
+	width: 7.320644216691069vw;
+  text-align: center;
+  line-height: 7.610350076103501vh;
+  background: black;
+  border-radius: 50%;
+  font-size: 1.82648401826484vh;
+  color: #666;
+  transition: .5s;
+  color: white;
+   box-shadow: 1px 1px 10px 5px red; 
+}
+
+ul li a::before {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 7.610350076103501vh;
+	width: 7.320644216691069vw;
+  border-radius: 50%;
+  background: #E50000;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #E50000;
+}
+
+ul li a:hover {
+  color: #E50000;
+  box-shadow: 0 0 5px #E50000;
+  text-shadow: 0 0 5px #E50000;
+}
+
+section{
+	font-size: 2.2831050228310503vh;
+	margin-top: 5vw;
+	margin-left: 10vh;
+	float: left;
+	border: solid;
+	width: 30%;
+	height: 36%;
+	background-color: RGB(0, 0, 0,0.7);
+	
+
+}
+
+section p{
+	
+	color: white;
+	margin-left: 0.625em;
+	margin-top: 0.625em;
+}
+
+aside {
+	font-size: 2.2831050228310503vh;
+	width: 24%;
+	height: 13%;
+	margin-top: 24.000em;
+	margin-left: 4.106em;
+	border: solid;
+	background-color: RGB(0, 0, 0,0.7);
+	
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+ footer{
+ 	
+ 	float: left;
+ 	width: 100vw;
+	height: 5vh;
+	background-color: black;
+	position: absolute;
+	bottom: 0px;
+ }
+ h2 {
+ 	font-size: 2.2831050228310503vh;
+ 	text-align: center;
+	color: red;
+	margin-top: 1vh;
+ }
+
+
+#todo {
+	float: left;
+
+	height: 85vh;
+	width: 100vw;
+}
+
+#merch {
+	width: 5.270863836017569vw;
+	height: 10.95890410958904vh;
+}
+#pop {
+	position: absolute;
+	left: 12vw;
+	top: 71vh;
+
+}

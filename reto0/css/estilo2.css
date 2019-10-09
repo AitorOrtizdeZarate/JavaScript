@@ -1,0 +1,94 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+
+	background-image: url("../imagenes/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+header{
+	background-color: black;
+	width: 100vw;
+	height: 18vh;
+	text-align: center;
+	font-size: 2.500em;
+	color: red;
+	font-family: 'Permanent Marker', cursive;
+}
+header p{
+
+	padding-top: 1.050em;
+}
+nav{
+	background-color: rgba(0,0,0,0.4);
+	color: red;
+	width: 100vw;
+	height: 7vh;
+}
+nav ul{
+	width: 100vw;
+	height: 5vh;
+	padding-top: 0.813em;
+
+}
+nav li{
+	
+	display: inline;
+	margin-left: 12.500em;
+
+}
+section{
+
+
+	width: 100vw;
+	height: 69vh;
+}
+footer{
+	background-color: rgba(0,0,0,0.4);
+	color: red;
+	width: 100vw;
+	height: 6vh;
+	text-align: center;
+}
+footer p{
+	padding-top: 0.650em; 
+}
+
+#descripcion2{
+	float: left;
+	margin-left: 2.500em;
+	margin-top: 8.750em;
+	width: 30vw;
+	height: 16vh;
+	color: black;
+	background-color: rgba(255,255,255,0.4);
+}
+#trailer2{
+
+	float: left;
+	margin-left: 2.500em;
+	margin-top: 5.000em;
+	border: 1px solid black;
+	width: 33.5vw;
+	height: 32.5vh;
+}
+#episodios2{
+	float: left;
+	width: 20vw;
+	height: 40.3vh;
+	margin-left: 4.375em;
+	margin-top: 5.000em;
+	color: red;
+	background-color: rgba(0,0,0,0.7);
+}
+#episodios2 li{
+	margin-top: 0.563em;
+	margin-left: 1.250em;
+	
+}
+a{
+	text-decoration: none;
+	color: red;
+}

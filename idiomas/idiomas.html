@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery.translate.js"></script>
+	<script>
+		var translator = $('body').translate({lang: "es", t: dict});
+		
+		var dict = {
+			"primerTrad": {
+				es: "Hola, mi nombre es Aitor",
+				eus: "Kaixo, nire izena Aitor da.",
+				en: "Hello, my name is Aitor"
+			},
+			"segundoTrad":{
+				es: "Tengo 19 años y nací en Octubre.",
+				eus: "19 urte dauzkat eta Urrian jaio nintzen.",
+				en: "I´m 19 and i was born in October."
+			},
+			"tercerTrad":{
+				es: "Adios, que te vaya bien.",
+				eus: "Agur, ongi izan.",
+				en: "Good bye, be happy."
+			},
+		}
+
+		function cambiarIngles(){
+			var translator = $('body').translate({lang: "en", t: dict});
+			
+		}
+		function cambiarEuskera(){
+			var translator = $('body').translate({lang: "eus", t: dict});
+			
+		}
+		function cambiarEspañol(){
+			var translator = $('body').translate({lang: "es", t: dict});
+			
+		}
+	</script>
+	<title>Idiomas</title>
+</head>
+<body>
+	<span class="trn" data-trn-key="primerTrad">Hola, mi nombre es Aitor</span>
+	<br>
+	<span class="trn" data-trn-key="segundoTrad">Tengo 19 años y nací en Octubre</span>
+	<br>
+	<span class="trn" data-trn-key="tercerTrad">Adios, que te vaya bien</span>
+	<br>
+	<input type="button" name="Ingles" value="Ingles" onclick="cambiarIngles()">
+	<input type="button" name="euskera" value="euskera" onclick="cambiarEuskera()">
+	<input type="button" name="español" value="español" onclick="cambiarEspañol()">
+
+
+	</script>
+</body>
+</html>
