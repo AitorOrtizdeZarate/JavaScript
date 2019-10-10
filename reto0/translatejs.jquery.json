@@ -1,0 +1,96 @@
+19-20 Desarrollo Web en clienteInformatika
+Tablón
+Trabajo de clase
+Personas
+
+    Todos los temas
+    Documentación
+    1 - JavaScript
+
+    Documentación
+
+    Material
+
+Monedas de oro
+Publicado el 9 sept.
+Material
+Programación
+Publicado el 9 sept.
+1 - JavaScript
+
+    Material
+
+Idiomas
+Publicado el 12:35
+jquery.translate.js
+JavaScript
+translatejs.jquery.json
+Archivo desconocido
+Completada Tarea
+Formularios
+Fecha de entrega: 4 oct. 23:59
+Material
+Manual JS
+Publicado el 3 sept.
+Material
+JS tutorial W3schools
+Publicado el 3 sept.
+Material
+Apuntes parte 1
+Publicado el 12 sept.
+Material
+Apuntes parte2
+Publicado el 2 oct.
+Completada Tarea
+Revisad el siguiente código
+Fecha de entrega: 2 oct. 23:59
+Material
+Código de análisis
+Publicado el 26 sept.
+Completada Tarea
+Actividad 2 funciones
+Fecha de entrega: 29 sept. 23:59
+Completada Tarea
+Actividad 1
+Fecha de entrega: 15 sept. 23:59
+
+{
+    "name": "translatejs",
+    "title": "translate.js",
+    "description": "A jQuery plugin to translate text in the client side.",
+    "keywords": [
+        "translate",
+        "translation",
+        "localization",
+        "language"
+    ],
+    "version": "0.9.1",
+    "author": {
+        "name": "Manuel Fernandes",
+        "url": "https://github.com/tinoni"
+    },
+    "maintainers": [
+        {
+            "name": "Manuel Fernandes",
+            "email": "mfernandes777@gmail.com",
+            "url": "https://github.com/tinoni"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/tinoni/translate.js/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/tinoni/translate.js/issues",
+    "homepage": "http://www.openxrest.com/translatejs/",
+    "docs": "http://www.openxrest.com/translatejs/",
+    "download": "https://github.com/tinoni/translate.js",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
+
+translatejs.jquery.json
+Mostrando jquery.translate.js.
+Entregando…
