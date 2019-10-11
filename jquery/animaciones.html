@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#div{
+			position: absolute;
+			top: 10px;
+			left: 300px;
+			height: 50px;
+			width: 50px;
+			background-color: red;
+
+		}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>Jquery ej</title>
+	<script>
+		$(document).ready(function(){
+			$("#mover1").click(function(){
+				$("#div").animate({
+				top: '300px',
+				height: '150px',
+				width: '150px',
+				opacity: '0.5'
+
+				})
+				});
+
+			$("#mover2").click(function(){
+				$("#div").animate({
+				left: '500px',
+				height: '300px',
+				width: '300px',
+				opacity: '0.7'
+
+				})
+				});
+
+			$("#mover3").click(function(){
+				$("#div").animate({
+				left: '300px',
+				height: '500px',
+				width: '500px',
+				opacity: '0.3',
+				top: '500px'
+
+				})
+				});
+
+			$("#volver").click(function(){
+				$("#div").animate({
+				top: '10px',
+				left: '300px',
+				height: '50px',
+				width: '50px',
+				opacity: '1'
+
+				})
+				});
+
+
+
+
+
+
+
+
+			});
+				
+		
+		
+
+
+	</script>
+</head>
+<body>
+	<div id="div"></div>
+	
+
+	<input type="button" name="boton" value="Mover1" id="mover1">
+	<input type="button" name="boton" value="Mover2" id="mover2">
+	<input type="button" name="boton" value="Mover3" id="mover3">
+	<input type="button" name="boton" value="Volver" id="volver">
+</body>
+</html>
