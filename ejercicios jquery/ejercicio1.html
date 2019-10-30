@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>Ejercicio 1</title>
+	<script>
+		
+		$(document).ready(function(){
+			
+			$("input").keydown(function(){
+				$("p").append(event.which);
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<h1>Keylogger</h1>
+	<input type="text">
+	<p></p>
+</body>
+</html>
