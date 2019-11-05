@@ -7,8 +7,8 @@
 		
 		$(document).ready(function(){
 			
-			$("input").keydown(function(){
-				$("p").append(event.which);
+			$("input").keydown(function(e){
+				$("p").append(e.key);
 			});
 		});
 
