@@ -2,7 +2,7 @@
 <html>
 <head>
 	<script src="jquery-3.4.1.min.js"></script>
-	<title>Ejercicio 3</title>
+	<title>Ejercicio 4</title>
 	<script>
 		
 
@@ -29,8 +29,11 @@
 				$("#apartado3").show();
 				$("#apartado3").fadeTo("slow", $("#opacidad").val());
 			});
-
 			
+			//Validacion
+			if (document.texto.value.length==0) {
+				alert("feo")
+			} 
 
 		});
 
@@ -51,7 +54,8 @@
 		</ul>
 	</nav>
 	<textarea id="opacidad"></textarea>
-	<div id="apartado1">
+	<p id="val"></p>
+	<div name="texto" id="apartado1">
 		<h1>APARTADO 1</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
