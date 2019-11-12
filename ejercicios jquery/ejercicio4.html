@@ -4,119 +4,45 @@
 	<script src="jquery-3.4.1.min.js"></script>
 	<title>Ejercicio 4</title>
 	<script>
-		
-
 		$(document).ready(function(){
-				$("#apartado1").show();
-				$("#apartado2").hide();
-				$("#apartado3").hide();
+			$("#boton").click(function() {
+
+				if ($(".select option[value='apartado1']").attr("selected", true)){
+					$("#apartado1").append($("#texto").val())	
+				}
+				else if ($(".select option[value='apartado2']").attr("selected", true)){
+					$("#apartado2").append($("#texto").val())	
+				}
+				else if ($(".select option[value='apartado3']").attr("selected", true)){
+					$("#apartado3").append($("#texto").val())	
+				}
 				
-			$("#boton1").click(function(){
-				$("#apartado1").show();
-				$("#apartado2").hide();
-				$("#apartado3").hide();
-				$("#apartado1").fadeTo("slow", $("#opacidad").val());
-			});
-			$("#boton2").click(function(){
-				$("#apartado1").hide();
-				$("#apartado2").show();
-				$("#apartado3").hide();
-				$("#apartado2").fadeTo("slow", $("#opacidad").val());
-			});
-			$("#boton3").click(function(){
-				$("#apartado1").hide();
-				$("#apartado2").hide();
-				$("#apartado3").show();
-				$("#apartado3").fadeTo("slow", $("#opacidad").val());
 			});
 			
-			//Validacion
-			if (document.texto.value.length==0) {
-				alert("feo")
-			} 
-
 		});
-
 	</script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li>
-				<button id="boton1">Apartado 1</button>
-			</li>
-			<li>
-				<button id="boton2">Apartado 2</button>
-			</li>
-			<li>
-				<button id="boton3">Apartado 3</button>
-			</li>			
-		</ul>
-	</nav>
-	<textarea id="opacidad"></textarea>
+	Texto que añadir: <input type="text" name="text" id="texto"><br><br>
+	Parrafo: <select class="select">
+		<option value="apartado1">APARTADO 1</option>
+		<option value="apartado2">APARTADO 2</option>
+		<option value="apartado3">APARTADO 3</option>
+	</select>
+	<input type="button" name="boton" id="boton" value="Pasar texto">
+	
 	<p id="val"></p>
-	<div name="texto" id="apartado1">
+	<div>
 		<h1>APARTADO 1</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p id="apartado1">Hola, </p>
 	</div>
-	<div id="apartado2">
+	<div>
 		<h1>APARTADO 2</h1>
-		<b><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b>
+		<p id="apartado2">Hola, </p>
 	</div>
-	<div id="apartado3" style="color: blue">
+	<div style="color: blue">
 		<h1>APARTADO 3</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p id="apartado3">Hola, </p>
 	</div>
 </body>
 </html>
