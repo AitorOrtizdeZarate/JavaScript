@@ -12,25 +12,65 @@
 				$("#apartado3").hide();
 				
 			$("#boton1").click(function(){
-				$("#apartado1").show();
-				$("#apartado2").hide();
-				$("#apartado3").hide();
-				$("#apartado1").fadeTo("slow", $("#opacidad").val());
+				//Validacion
+				if (!$("#opacidad").val()) {
+					alert("Debes de escribir algo en el textarea");
+				}
+				else if($("#opacidad").val()>1){
+					alert("El numero debe ser un numero decimal entre 0 y 1")
+				}
+				else {
+					$("#apartado1").show();
+					$("#apartado2").hide();
+					$("#apartado3").hide();
+					$("#apartado1").fadeTo("slow", $("#opacidad").val());
+				}
+				
 			});
 			$("#boton2").click(function(){
+				//Validacion
+				if (!$("#opacidad").val()) {
+					alert("Debes de escribir algo en el textarea");
+				}
+				else if($("#opacidad").val()>1){
+					alert("El numero debe ser un numero decimal entre 0 y 1")
+				}
+				else {
 				$("#apartado1").hide();
 				$("#apartado2").show();
 				$("#apartado3").hide();
 				$("#apartado2").fadeTo("slow", $("#opacidad").val());
+				}
 			});
 			$("#boton3").click(function(){
+				//Validacion
+				if (!$("#opacidad").val()) {
+					alert("Debes de escribir algo en el textarea");
+				}
+				else if($("#opacidad").val()>1){
+					alert("El numero debe ser un numero decimal entre 0 y 1")
+				}
+				else {
 				$("#apartado1").hide();
 				$("#apartado2").hide();
 				$("#apartado3").show();
 				$("#apartado3").fadeTo("slow", $("#opacidad").val());
+				}
 			});
 
-			
+				$("#opacidad").keydown(function(event) {
+				   if(event.shiftKey){
+				        event.preventDefault();
+				   }
+				    if (event.keyCode == 46 || event.keyCode == 8)    {
+	  				 }else {
+				        if (event.keyCode < 95) {
+				          if (event.keyCode < 48 || event.keyCode > 57) {
+				                event.preventDefault();
+				          }
+				        } 
+				      }
+				   });
 
 		});
 

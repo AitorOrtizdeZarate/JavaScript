@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="jquery-3.4.1.min.js"></script>
-	<title>Ejercicio 4</title>
-	<script>
-		$(document).ready(function(){
-			$("#boton").click(function() {
+<script src="jquery-3.4.1.min.js"></script>
+<title>Ejercicio 4</title>
+<script>
 
-				if ($(".select option[value='apartado1']").attr("selected", true)){
-					$("#apartado1").append($("#texto").val())	
-				}
-				else if ($(".select option[value='apartado2']").attr("selected", true)){
-					$("#apartado2").append($("#texto").val())	
-				}
-				else if ($(".select option[value='apartado3']").attr("selected", true)){
-					$("#apartado3").append($("#texto").val())	
-				}
-				
-			});
-			
-		});
-	</script>
+
+$(document).ready(function(){
+$("#boton").click(function(){
+//Validacion
+if (!$("#texto").val()) {
+alert("Debes de escribir algo en el area");
+}
+else if($(".select").val() == "1"){
+$("#apartado1").append($("#texto").val());
+}
+else if($(".select").val() == "2"){
+$("#apartado2").append($("#texto").val());
+}
+else if($(".select").val() == "3"){
+$("#apartado3").append($("#texto").val());
+}
+});
+
+$("#negrita").click(function(){
+if($(".select").val() == "1"){
+$("#apartado1").css("font-weight", "bold");
+$("#apartado2").css("font-weight", "normal");
+$("#apartado3").css("font-weight", "normal");
+}
+else if($(".select").val() == "2"){
+$("#apartado1").css("font-weight", "normal");
+$("#apartado2").css("font-weight", "bold");
+$("#apartado3").css("font-weight", "normal");
+}
+else if($(".select").val() == "3"){
+$("#apartado1").css("font-weight", "normal");
+$("#apartado2").css("font-weight", "normal");
+$("#apartado3").css("font-weight", "bold");
+}
+});
+$("#reset").click(function(){
+location.reload();
+
+
+});
+
+});
+
+
+</script>
 </head>
 <body>
-	Texto que añadir: <input type="text" name="text" id="texto"><br><br>
-	Parrafo: <select class="select">
-		<option value="apartado1">APARTADO 1</option>
-		<option value="apartado2">APARTADO 2</option>
-		<option value="apartado3">APARTADO 3</option>
-	</select>
-	<input type="button" name="boton" id="boton" value="Pasar texto">
-	
-	<p id="val"></p>
-	<div>
-		<h1>APARTADO 1</h1>
-		<p id="apartado1">Hola, </p>
-	</div>
-	<div>
-		<h1>APARTADO 2</h1>
-		<p id="apartado2">Hola, </p>
-	</div>
-	<div style="color: blue">
-		<h1>APARTADO 3</h1>
-		<p id="apartado3">Hola, </p>
-	</div>
+Texto que deseas añadir: <input type="text" name="texto" id="texto"><br><br>
+Apartado <select class="select">
+<option value="1" selected="true">Apartado 1</option>
+<option value="2">Apartado 2</option>
+<option value="3">Apartado 3</option>
+</select><br><br>
+<input type="button" name="boton" value="insertar" id="boton">
+<input type="button" name="boton" value="negrita" id="negrita">
+<input type="button" name="boton" value="reset" id="reset">
+
+<p id="val"></p>
+<div>
+<h1>APARTADO 1</h1>
+<p id="apartado1">Hola, </p>
+</div>
+<div>
+<h1>APARTADO 2</h1>
+<p id="apartado2">Hola, </p>
+</div>
+<div>
+<h1>APARTADO 3</h1>
+<p id="apartado3">Hola, </p>
+</div>
 </body>
 </html>
