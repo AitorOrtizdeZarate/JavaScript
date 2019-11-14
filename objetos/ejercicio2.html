@@ -3,23 +3,32 @@
 <head>
 	<title>Ejercicio2 objetos</title>
 	<script type="text/javascript">
-		let persona = [
+		let persona = 
 			{
 				nombre: '',
 				apellido: '',
 				email: '',
 				dni: '',
-				asignar_datos: function(nombre){
-					this.nombre = "Aitor";
+				asignar_datos: function(per){
+					this.nombre = per.name;
+					this.apellido = per.surname;
+					this.email = per.mail;
+					this.dni = per.dni;
 				}
 
-			}
-		];
-		var x = '{ "alien":[{"name":"paul", "surname":"Ortiz", "mail":"alien@gmail.com", "dni":"75482568N"}]}'
+			};
+		var x = '{ "alien":[{"name":"paul", "surname":"Rodriguez", "mail":"alien@gmail.com", "dni":"75482568N"}]}'
 		var alien = JSON.parse(x);
 
-		console.log(persona[0].nombre);
-		console.log(alien.alien[0].name, alien.alien[0].surname, alien.alien[0].mail, alien.alien[0].dni);
+		persona.asignar_datos(alien.alien[0]);
+
+		console.log("El nombre completo del alien es: "+persona.nombre, persona.apellido);
+		console.log("El email del alien es: "+ persona.email);
+		console.log("El dni del alien es: "+persona.dni);
+
+		
+
+		
 
 		
 		

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio libre</title>
+	<script type="text/javascript">
+	let cantante ={
+		nombre:'',
+		edad: '',
+		cancion: '',
+		asignar_datos: function(cant){
+			this.nombre = cant.name;
+			this.edad = cant.age;
+			this.cancion = cant.BestSong;
+		}
+		/*set mayus(mayus){
+			this.nombre = mayus.toUpperCase();
+		}*/
+	};
+
+	//document.getElementById("demo").innerHTML = cantante.nombre;
+
+	let cantante2 ={
+		nombre:'',
+		edad: '',
+		cancion: '',
+		asignar_datos: function(cant){
+			this.nombre = cant.name;
+			this.edad = cant.age;
+			this.cancion = cant.BestSong;
+		}
+	}
+	let cantante3 ={
+		nombre:'',
+		edad: '',
+		cancion: '',
+		asignar_datos: function(cant){
+			this.nombre = cant.name;
+			this.edad = cant.age;
+			this.cancion = cant.BestSong;
+		}
+	}
+
+		var x = '{ "singers":[{"name":"Lil Mosey", "age":"17", "BestSong":"Noticed"}, {"name":"Juice WRLD", "age":"20", "BestSong":"Lucid Dreams"},{"name":"Iann Dior", "age":"20", "BestSong":"Emotions"}]}';
+		var singer = JSON.parse(x);
+
+		cantante.asignar_datos(singer.singers[0]);
+		cantante2.asignar_datos(singer.singers[1]);
+		cantante3.asignar_datos(singer.singers[2]);
+
+
+		console.log(cantante.nombre, cantante.edad, cantante.cancion);
+		console.log(cantante2.nombre, cantante2.edad, cantante2.cancion);
+		console.log(cantante3.nombre, cantante3.edad, cantante3.cancion);
+
+		
+		
+
+	</script>
+</head>
+<body>
+
+	<p id="demo"> asd</p>
+</body>
+</html>
