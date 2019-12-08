@@ -1,4 +1,4 @@
-import { Cantante } from 'cantante.js';
+import { Cantante } from './cantante.js';
 
 $(document).ready(function () {
 
@@ -13,7 +13,7 @@ $(document).ready(function () {
 	}
 
 	let element = document.getElementById("tabla");
-	let tabla = "<table border 1>";
+	let tabla = "<table border=1>";
 	tabla += "<tr>";
     tabla += "<th>Nombre</th>"
     tabla += "<th>Edaad</th>";
@@ -25,6 +25,7 @@ $(document).ready(function () {
     	tabla += "<td>" + cantantesArray[i].getNombre() + "</td>";
         tabla += "<td>" + cantantesArray[i].getEdad() + "</td>";
         tabla += "<td>" + cantantesArray[i].getCancion() + "</td>";
+        tabla += "</tr>"
     }
 
     tabla += "</table>"
