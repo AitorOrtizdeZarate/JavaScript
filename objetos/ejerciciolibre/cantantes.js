@@ -1,4 +1,4 @@
-import { Cantante } from './cantante.js';
+import { Cantante } from 'cantante.js';
 
 $(document).ready(function () {
 
@@ -29,5 +29,5 @@ $(document).ready(function () {
 
     tabla += "</table>"
     element.innerHTML = tabla;
-}
+});
 
