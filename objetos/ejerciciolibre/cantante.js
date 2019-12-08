@@ -1,5 +1,5 @@
 class Cantante {
-	datos(nombre, edad,cancion){
+	datos(nombre, edad, cancion){
 		this.nombre = nombre;
 		this.edad = edad;
 		this.cancion= cancion;
