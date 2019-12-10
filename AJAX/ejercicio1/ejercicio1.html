@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio1</title>
+</head>
+<script type="text/javascript">
+	var request = new XMLHttpRequest()
+	request.open('GET', 'https://datos.aramendi.eu/datos.json', true)
+	request.onload = function() {
+		var data = JSON.parse(this.response)
+
+		if(request.status >= 200 && request.status < 400){
+			console.log(data);
+		}else{
+			console.log('error');
+		}
+	}
+	request.send()
+</script>
+<body>
+	
+</body>
+</html>
