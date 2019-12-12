@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<script type="text/javascript">
+	var request =  new XMLHttpRequest()
+	var seleccionado = document.getElementById("combo");
+	var num = document.getElementById("numero");
+	request.open('GET', 'https://swapi.co/api/'+seleccionado+'/'+num+'/', true)
+	request.onclick = function(){
+		var data = JSON.parse(this.response)
+
+		if (request.status >= 200 && request.status < 400){
+			console.log(data);
+		}else{
+			console.log('error');
+		}
+	}
+	request.send()
+
+</script>
+<body>
+	<form>
+		Numero: <input type="number" id="numero"><br>
+		Datos: <input type="text" id="datos"><br>
+		<select id="combo">
+			<option value="people">Personas</option>
+			<option value="planets">Planetas</option>
+			<option value="starships">Starships</option>
+		</select><br>
+		<button>Get JS</button><button>Get JQuery</button><button>Set JS</button><button>Set JQuery</button>
+	</form>
+	<div id="div"></div>
+</body>
+</html>
