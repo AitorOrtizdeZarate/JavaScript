@@ -1,4 +1,4 @@
-import { Cantante } from './cantante.js';
+import { Cantante } from 'cantante.js';
 
 $(document).ready(function () {
 
