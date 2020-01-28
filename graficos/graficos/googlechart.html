@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Google chart</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> </script>
+	<script type="text/javascript">
+		google.charts.load('current', {
+        	'packages': ['gauge']
+      });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      	var num = document.getElementById('numero').value;
+      	num= parseInt(num)
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Memory', num],
+        ]);
+
+        
+
+        var options = {
+          width: 400,
+          height: 120,
+          redFrom: 90,
+          redTo: 100,
+          yellowFrom: 75,
+          yellowTo: 90,
+          minorTicks: 5,
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('marksChart'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 13000);
+      }
+	</script>
+</head>
+<body>
+	<div>
+		<div id="marksChart" width="300" height="200"></div>
+	</div>
+	<input type="button" name="Cambiar Memoria" value="Cambiar Memoria" onclick="drawChart()">
+	<input type="text" name="numero"  id="numero">
+	
+</body>
+</html>
