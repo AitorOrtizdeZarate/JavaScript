@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LocalStorage</title>
+</head>
+<body>
+	<div>
+		<input type="button" id="es" onclick="cambiarIdioma('es')" value="Español">
+		<input type="button" id="en" onclick="cambiarIdioma('en')" value="English">
+	</div>
+	<div>
+		<h1 class="trn" data-trn-key="1">Primera pagina</h1>
+		<p class="trn" data-trn-key="2">Me he quedado dormido</p>
+		<a href="2.html" class="trn">Segunda pag</a>
+		<p>1/2</p>
+	</div>
+<script src="jquery.slim.min.js"></script>
+<script src="jquery.translate.js"></script>
+<script>
+	//diccionario
+	var dic = {
+		"1":{
+			es: "Primera pagina",
+			en: "First page"
+		}, 
+		"2":{
+			es: "Me he quedado dormido",
+			en: "I have fallen asleep"
+		}
+	}
+</script>
+<script src="js.js"></script>
+</body>
+</html>

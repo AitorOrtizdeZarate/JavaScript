@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>1ª actividad</title>
+</head>
+<script type="text/javascript">
+	
+</script>
+<body>
+	<h1>Star WARS API + data info</h1>
+	<form>
+		Numero:<input type="number" name="numero" id="numero" placeholder="Mete un numero"><br><br>
+	Titulo:<input type="text" name="titulo" id="titulo" placeholder="Mete un titulo (Post)"><br><br>
+	<select id="tipos" name="select">
+		<option value="people">people</option>
+		<option value="planets">planets</option>
+		<option value="starships">starships</option>
+	</select><br><br>
+
+	<input type="button" name="GetJS" value="Get JS" onclick="getJS()">
+	<input type="button" name="GetJQ" value="Get Query" id="getQuery">
+	<input type="button" name="PostJS" value="Post JS" onclick="postJS()">
+	<input type="button" name="PostJQ" value="Post Query" id="postQuery">
+	</form>
+
+	<h2 id="tipo"></h2>
+
+	<div id="getPersona">
+		<div id="pPe"></div>
+	</div>
+	<div id="getPlaneta">
+		<p id="pPl"></p>
+	</div>
+	<div id="getNave">
+		<p id="pNa"></p>
+	</div>
+
+	<div id="post">
+		<p id="pPost"></p>
+	</div>
+
+	<script src="../jquery-3.4.1.min.js"></script>
+	<script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>asd</title>
+	<script type="text/javascript">
+		
+		let persona = '{"persona":[{"nombre": "Aitor", "edad": "19"}, {"nombre": "Alex", "edad": "20"}]}';
+		let personas = JSON.parse(persona);
+
+		console.log(personas.persona[0].nombre)
+
+		
+
+		let nombre = () =>{
+			let numero = document.querySelectorAll("input[type='radio']");
+			let info = document.getElementById('persona');
+			
+			if (numero[0].checked == true){
+				let element = "<p><b>El nombre de la primera persona es: </b>"+personas.persona[0].nombre+"</p>";
+				element += "<p><b>La edad de la primera persona es: </b>"+personas.persona[0].edad+"</p>";
+				info.innerHTML = element;
+			}else if(numero[1].checked == true){
+				let element = "<p><b>El nombre de la segunda persona es: </b>"+personas.persona[1].nombre+"</p>";
+				element += "<p><b>La edad de la segunda persona es: </b>"+personas.persona[1].edad+"</p>";
+				info.innerHTML = element;
+			}
+
+			
+		}
+
+	</script>
+</head>
+<body>
+	<fieldset>
+		<input type="radio" value="0" name="pos"> Primera Persona
+		<input type="radio" value="1" name="pos"> Segunda Persona
+	</fieldset>
+	<input type="button" value="Sacar persona" onclick="nombre()">
+	<div id="persona"></div>
+</body>
+</html>
